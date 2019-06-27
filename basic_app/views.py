@@ -4,7 +4,7 @@ from . import models
 # Create your views here.
 
 class IndexView(TemplateView):
-    context_object_name = 'basic_app/index.html'
+    template_name = 'index.html'
 
 
 class SchoolListView(ListView):
@@ -15,4 +15,4 @@ class SchoolListView(ListView):
 class SchoolDetailView(DetailView):
     context_object_name = 'school_detail'
     model = models.School
-    template_name = 'basic_app/school_detail.html'
+    template_name = 'basic_app/school_details.html'

@@ -5,5 +5,5 @@ app_name = 'basic_app'
 
 urlpatterns = [
     url('list', views.SchoolListView.as_view(), name='list'),
-    url('detail', views.SchoolDetailView.as_view(), name='detail'),
+    url(r'^(?P<pk>\d+)/$',views.SchoolDetailView.as_view(),name='detail'),
 ]

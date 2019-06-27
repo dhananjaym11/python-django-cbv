@@ -5,9 +5,10 @@
 <h1>List page</h1>
 
 <ol>
-    {% for school in school_list %}
+    {% for school in schools %}
     <li>
-        <h2>{{school.name}}</h2>
+        <h2>
+            <a href="{% url 'basic_app:detail' school.id %}">{{school.name}}</a></h2>
     </li>
     {% endfor %}
 </ol>
