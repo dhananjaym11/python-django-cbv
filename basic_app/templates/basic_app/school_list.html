@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "basic_app/basic_app_base.html" %}
+
+{% block body_block %}
+<h1>List page</h1>
+
+<ol>
+    {% for school in school_list %}
+    <li>
+        <h2>{{school.name}}</h2>
+    </li>
+    {% endfor %}
+</ol>
+
+{% endblock %}
