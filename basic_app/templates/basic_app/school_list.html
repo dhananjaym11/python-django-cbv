@@ -8,7 +8,9 @@
     {% for school in schools %}
     <li>
         <h2>
-            <a href="{% url 'basic_app:detail' school.id %}">{{school.name}}</a></h2>
+            <a href="{% url 'basic_app:detail' school.id %}">{{school.name}}</a>
+        </h2>
+        <a class='btn btn-warning' href="{% url 'basic_app:delete' pk=school.id %}">delete</a>
     </li>
     {% endfor %}
 </ol>
